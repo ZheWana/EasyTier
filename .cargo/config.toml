@@ -74,7 +74,10 @@ rustflags = ["-C", "target-feature=+crt-static"]
 
 [target.loongarch64-unknown-linux-musl]
 linker = "loongarch64-unknown-linux-musl-gcc"
-rustflags = ["-C", "target-feature=+crt-static"]
+rustflags = [
+    "-C", "target-feature=+crt-static",
+    "-C", "target-cpu=generic"
+]
 
 [target.arm-unknown-linux-musleabihf]
 linker = "arm-unknown-linux-musleabihf-gcc"
